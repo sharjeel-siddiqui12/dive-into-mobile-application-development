@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MAD_Lab</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="name_text">Muhammad Sharjeel Siddiqui</string>
+    <string name="placeholder">Placeholder</string> <!-- Add this line -->
+</resources>
