@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView textView = findViewById(R.id.textViewName);
-        textView.setText("Muhammad Sharjeel Siddiqui");
+        textView.setText("Sharjeel Siddiqui");
         textView.setTextColor(ContextCompat.getColor(this, R.color.teal_700)); // Use ContextCompat.getColor
     }
 }
