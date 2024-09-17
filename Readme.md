@@ -22,7 +22,7 @@ The project is organized into the following main directories and files:
 ## Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/sharjeel-siddiqui12/dive-into-mobile-application-development.git
+     git clone https://github.com/sharjeel-siddiqui12/dive-into-mobile-application-development.git
     ```
 2. Open the project in Android Studio.
 3. Build the project to download dependencies and set up the environment.
