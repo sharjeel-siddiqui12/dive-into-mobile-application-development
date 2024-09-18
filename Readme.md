@@ -1,7 +1,7 @@
 # Mobile Application Development Basics
 
 ## Overview
-MAD_Lab is an Android application developed as part of a Mobile Application Development lab. The project demonstrates basic Android development concepts using Java and XML.
+This project is an Android application developed as part of a Mobile Application Development lab. The project demonstrates basic Android development concepts using Java and XML.
 
 ## Features
 - Displays a welcome message with the developer's name.
