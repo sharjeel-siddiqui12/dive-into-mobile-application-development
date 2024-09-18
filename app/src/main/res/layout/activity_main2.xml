@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:hint="Enter text" />
 
+
     <Button
         android:id="@+id/buttonShowToast"
         android:layout_width="wrap_content"
