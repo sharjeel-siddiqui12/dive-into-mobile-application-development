@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">MAD_Lab</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="name_text">Muhammad Sharjeel Siddiqui</string>
-    <string name="placeholder">Placeholder</string> <!-- Add this line -->
+    <string name="name_text">Siddiqui</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="title_activity_main2">MainActivity2</string> <!-- Add this line -->
+
+
+    <string name="my_name">Muhammad Sharjeel Siddiqui</string>
+    <string name="first_name">Sharjeel</string>
+
+
+
 </resources>
