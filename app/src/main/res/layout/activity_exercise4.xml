@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F0F0F0">
+
+    <!-- Heading for Event Feedback -->
+    <TextView
+        android:id="@+id/tvEventHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Feedback"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif" /> <!-- Custom Font -->
+
+    <!-- First choice RadioGroup -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Choice"
+        android:textSize="18sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgFirstChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPizzaFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbFriedRiceFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fried Rice"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbPancakesFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pancakes"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+    </RadioGroup>
+
+    <!-- Second choice RadioGroup -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Choice"
+        android:textSize="18sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgSecondChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPizzaSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbFriedRiceSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fried Rice"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbPancakesSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pancakes"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+    </RadioGroup>
+
+    <!-- Third choice RadioGroup -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third Choice"
+        android:textSize="18sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgThirdChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPizzaThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbFriedRiceThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fried Rice"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+
+        <RadioButton
+            android:id="@+id/rbPancakesThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pancakes"
+            android:textColor="#555555"
+            android:padding="12dp"
+            android:background="@drawable/radiobutton_background"/>
+    </RadioGroup>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        /> <!-- Rounded corners -->
+</LinearLayout>
