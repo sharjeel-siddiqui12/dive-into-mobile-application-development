@@ -9,6 +9,9 @@
     <string name="my_name">Muhammad Sharjeel Siddiqui</string>
     <string name="first_name">Sharjeel</string>
 
+    <string name="l2e2_app_name">Exercise01</string>
+    <string name="l2e2_my_name">Muhammad Sharjeel Siddiqui</string>
+    <string name="l2e2_instructor_name">Miss Gul Saba</string> <!-- Add this -->
 
 
 </resources>
