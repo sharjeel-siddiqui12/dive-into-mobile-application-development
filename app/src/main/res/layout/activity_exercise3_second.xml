@@ -6,7 +6,6 @@
     android:background="#FFFFFF"
     android:padding="16dp">
 
-    <!-- Button 1: Show Toast -->
     <Button
         android:id="@+id/buttonShowToast"
         android:layout_width="wrap_content"

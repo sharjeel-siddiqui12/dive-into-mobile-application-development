@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">MAD_Lab</string>
+    <string name="ex1app_name">MAD_Lab</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="name_text">Siddiqui</string>
     <string name="placeholder">Placeholder</string>
-    <string name="title_activity_main2">MainActivity2</string> <!-- Add this line -->
+    <string name="title_activity_main2">MainActivity2</string>
 
 
     <string name="my_name">Muhammad Sharjeel Siddiqui</string>
@@ -11,7 +11,16 @@
 
     <string name="l2e2_app_name">Exercise01</string>
     <string name="l2e2_my_name">Muhammad Sharjeel Siddiqui</string>
-    <string name="l2e2_instructor_name">Miss Gul Saba</string> <!-- Add this -->
+    <string name="l2e2_instructor_name">Miss Gul Saba</string>
+
+    <string name="app_name">BakeryProductOrderForm</string>
+    <string-array name="quantity_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 
 
 </resources>

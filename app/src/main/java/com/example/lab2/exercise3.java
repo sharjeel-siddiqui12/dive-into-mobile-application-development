@@ -20,8 +20,6 @@ public class exercise3 extends AppCompatActivity {
         setContentView(R.layout.activity_exercise3);
 
         buttonGoToSecondActivity = findViewById(R.id.buttonGoToSecondActivity);
-
-        // Navigate to the second activity
         buttonGoToSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

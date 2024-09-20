@@ -18,13 +18,11 @@ public class exercise4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise4);
 
-        // Initialize the RadioGroups and Button
         rgFirstChoice = findViewById(R.id.rgFirstChoice);
         rgSecondChoice = findViewById(R.id.rgSecondChoice);
         rgThirdChoice = findViewById(R.id.rgThirdChoice);
         btnSubmit = findViewById(R.id.btnSubmit);
 
-        // Set click listener for the submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +42,6 @@ public class exercise4 extends AppCompatActivity {
                     return;
                 }
 
-                // If all fields are filled, show success message
                 Toast.makeText(exercise4.this, "Thank you for your feedback!", Toast.LENGTH_SHORT).show();
             }
         });
