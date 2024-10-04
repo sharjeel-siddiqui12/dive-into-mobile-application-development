@@ -1,4 +1,4 @@
-# Mobile Application Development Basics
+# Mobile Application Development Lab Assignments
 
 ## Overview
 This project is an Android application developed as part of a Mobile Application Development lab. The project demonstrates basic Android development concepts using Java and XML.
