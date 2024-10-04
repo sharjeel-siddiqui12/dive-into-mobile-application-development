@@ -14,8 +14,8 @@ import androidx.fragment.app.ListFragment;
 public class L3exercise3ListFrag extends ListFragment  {
     private TextView name, location;
 
-    String[] users = { "Sharjeel", "Umar", "Ghaffar", "Shaheer", "Jawad" };
-    String[] locations = { "Karachi", "Lahore", "Hyderabad", "Islamabad", "Rawalpindi"};
+    String[] users = { "John", "Cena", "Undertaker", "kane", "Reigns" };
+    String[] locations = { "NY", "LA", "California", "washington", "Dallas"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

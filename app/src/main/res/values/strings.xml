@@ -13,7 +13,7 @@
     <string name="l2e2_my_name">Muhammad Sharjeel Siddiqui</string>
     <string name="l2e2_instructor_name">Miss Gul Saba</string>
 
-    <string name="app_name">BakeryProductOrderForm</string>
+    <!--    <string name="app_name">BakeryProductOrderForm</string>-->
     <string-array name="quantity_array">
         <item>1</item>
         <item>2</item>
@@ -22,7 +22,8 @@
         <item>5</item>
     </string-array>
 
-    <string name="Lab3">Lab3</string>
+    <string name="app_name">Lab4</string>
+    <string name="message">Welcome to the new activity!</string>
 
 
 </resources>

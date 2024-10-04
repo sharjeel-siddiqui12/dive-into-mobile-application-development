@@ -10,8 +10,8 @@ import android.widget.ListView;
 import androidx.fragment.app.ListFragment;
 
 public class L3exercise4List extends ListFragment    {
-    String[] courses = { "React", "iOS", "Node.js", "Java", "Kotlin" };
-    String[] details = { "React development course", "iOS development course", "Node.js course", "Java programming", "Kotlin development course" };
+    String[] courses = { "CSS", "Go", "Ruby", "SQL", "Kotlin" };
+    String[] details = { "CSS development course", "Go development course", "Ruby course", "SQL programming", "Kotlin development course" };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -13,19 +13,27 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="exercise2">
+      <SelectionState runConfigName="L3exercise2Main">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-09-30T14:39:45.239763500Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=407ce77a" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="L3exercise3Main">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="exercise3">
+      <SelectionState runConfigName="L4exercise1">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="exercise4">
+      <SelectionState runConfigName="L4exercise1Display">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="exercise5">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="L3exercise1">
+      <SelectionState runConfigName="L4exercise2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
