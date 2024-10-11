@@ -22,8 +22,16 @@
         <item>5</item>
     </string-array>
 
-    <string name="app_name">Lab4</string>
+    <string name="app_name">Lab5</string>
     <string name="message">Welcome to the new activity!</string>
+
+    <string-array name="course_options">
+        <item>Computer Science</item>
+        <item>Information Technology</item>
+        <item>Electrical Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Civil Engineering</item>
+    </string-array>
 
 
 </resources>
