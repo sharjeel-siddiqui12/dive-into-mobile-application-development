@@ -1,7 +1,7 @@
 # Mobile Application Development Lab Assignments
 
 ## Overview
-This project gives an overview of Android application developed as part of a Mobile Application Development lab. The project demonstrates basic Android development concepts using Java and XML.
+This project gives the basics of Android application developed as part of a Mobile Application Development lab. The project demonstrates basic Android development concepts using Java and XML.
 
 ## Features
 - Displays a welcome message with the developer's name.
