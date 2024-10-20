@@ -13,19 +13,19 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="L4exercise2">
+      <SelectionState runConfigName="l6exercise1">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="L4exercise3">
+      <SelectionState runConfigName="l6exercise2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="L4exercise4">
+      <SelectionState runConfigName="l6exercise3">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="L5exercise2">
+      <SelectionState runConfigName="l6exercise4">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="L5exercise1">
+      <SelectionState runConfigName="l6exercise5">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
