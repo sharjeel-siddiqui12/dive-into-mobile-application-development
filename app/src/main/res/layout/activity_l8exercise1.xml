@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:clipToPadding="false">
+
+        <!-- Title for the App -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee Registration"
+            android:textSize="22sp"
+            android:textColor="#FF6200EE"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Input fields for Employee Data -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Name"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161" />
+        <EditText
+            android:id="@+id/empNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter full name"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salary"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161" />
+        <EditText
+            android:id="@+id/salaryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter salary"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Joining Date"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161" />
+        <EditText
+            android:id="@+id/joiningDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:hint="YYYY-MM-DD"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Education"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161" />
+        <EditText
+            android:id="@+id/educationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter qualification"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience (Years)"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161" />
+        <EditText
+            android:id="@+id/experienceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter years of experience"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number" />
+
+        <!-- Button to Add Data -->
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Employee"
+            android:backgroundTint="#FF6200EE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
