@@ -8,6 +8,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.mad_lab.R;
 import android.util.Log;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class L8exercise1 extends AppCompatActivity {
 
@@ -49,6 +52,17 @@ public class L8exercise1 extends AppCompatActivity {
 
                 int salary = Integer.parseInt(salaryStr);
                 int experience = Integer.parseInt(experienceStr);
+
+                // Validate and format the joining date
+                SimpleDateFormat inputFormat = new SimpleDateFormat("dd-MM-yyyy");
+                inputFormat.setLenient(false); // Ensures strict date parsing
+                try {
+                    Date date = inputFormat.parse(joiningDate); // Parse to ensure correct format
+                    joiningDate = inputFormat.format(date); // Format to DD-MM-YYYY again to standardize
+                } catch (Exception e) {
+                    Toast.makeText(L8exercise1.this, "Invalid date format. Use DD-MM-YYYY.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 // Create an Employer instance
                 Employer employer = new Employer(empName, salary, joiningDate, education, experience);

@@ -1,15 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp"
+    android:gravity="center_horizontal">
 
-    <!-- Display your name -->
-    <TextView
-        android:id="@+id/textViewName"
+    <EditText
+        android:id="@+id/empName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Employee Name"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/empSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Salary"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/empJoiningDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Joining Date (YYYY-MM-DD)"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/empEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Education"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/empExperience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Experience (Years)"
+        android:inputType="number"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/addEmployerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/white" />
+        android:text="Add Employer"
+        android:textColor="#FFFFFF"
+        android:background="#FF5722"
+    android:padding="12dp"
+    android:layout_gravity="center" />
 </LinearLayout>
