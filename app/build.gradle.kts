@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.android.material:material:1.11.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.lifecycle.runtime.ktx)
@@ -72,4 +72,5 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
 }

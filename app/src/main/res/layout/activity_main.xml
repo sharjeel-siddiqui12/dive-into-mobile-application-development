@@ -3,53 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:padding="16dp">
 
     <EditText
-        android:id="@+id/empName"
+        android:id="@+id/et_courseName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Employee Name"
-        android:layout_marginBottom="12dp" />
+        android:hint="Course Name" />
 
     <EditText
-        android:id="@+id/empSalary"
+        android:id="@+id/et_courseCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Salary"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="12dp" />
+        android:hint="Course Code" />
 
     <EditText
-        android:id="@+id/empJoiningDate"
+        android:id="@+id/et_instructor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Joining Date (YYYY-MM-DD)"
-        android:layout_marginBottom="12dp" />
-
-    <EditText
-        android:id="@+id/empEducation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Education"
-        android:layout_marginBottom="12dp" />
-
-    <EditText
-        android:id="@+id/empExperience"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Experience (Years)"
-        android:inputType="number"
-        android:layout_marginBottom="24dp" />
+        android:hint="Instructor Name" />
 
     <Button
-        android:id="@+id/addEmployerBtn"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Employer"
-        android:textColor="#FFFFFF"
-        android:background="#FF5722"
-    android:padding="12dp"
-    android:layout_gravity="center" />
+        android:text="Add Course" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Course" />
+
+    <ListView
+        android:id="@+id/lv_courses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

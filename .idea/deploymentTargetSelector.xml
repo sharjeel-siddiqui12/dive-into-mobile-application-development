@@ -19,13 +19,13 @@
       <SelectionState runConfigName="L7exercise2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="L7exercise3">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="L8exercise1">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="MainActivity">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="L9exercise1">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

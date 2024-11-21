@@ -6,31 +6,29 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class DBHandler extends SQLiteOpenHelper {
-    private static final String DB_NAME = "TestDatabase";
-    private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "Employers";
-    private static final String ID_COL = "empid";
-    private static final String NAME_COL = "emp_name";
-    private static final String SALARY_COL = "salary";
-    private static final String JOINING_DATE_COL = "joining_date";
-    private static final String EDUCATION_COL = "education";
-    private static final String EXPERIENCE_COL = "experience";
+
+    private static final String DATABASE_NAME = "CourseDB";
+    private static final String TABLE_NAME = "courses";
+    private static final String ID = "id";
+    private static final String COURSE_NAME = "course_name";
+    private static final String COURSE_CODE = "course_code";
+    private static final String INSTRUCTOR = "instructor";
 
     public DBHandler(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + TABLE_NAME + " ("
-                + ID_COL + " TEXT PRIMARY KEY, "
-                + NAME_COL + " TEXT, "
-                + SALARY_COL + " REAL, "
-                + JOINING_DATE_COL + " TEXT, "
-                + EDUCATION_COL + " TEXT, "
-                + EXPERIENCE_COL + " INTEGER)";
-        db.execSQL(query);
+        String createTable = "CREATE TABLE " + TABLE_NAME + "(" +
+                ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COURSE_NAME + " TEXT, " +
+                COURSE_CODE + " TEXT, " +
+                INSTRUCTOR + " TEXT)";
+        db.execSQL(createTable);
     }
 
     @Override
@@ -39,16 +37,50 @@ public class DBHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addEmployer(Employer employer) {
+    public boolean insertCourse(String courseName, String courseCode, String instructor) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(ID_COL, employer.getEmpid());
-        values.put(NAME_COL, employer.getEmp_name());
-        values.put(SALARY_COL, employer.getSalary());
-        values.put(JOINING_DATE_COL, employer.getJoining_date());
-        values.put(EDUCATION_COL, employer.getEducation());
-        values.put(EXPERIENCE_COL, employer.getExperience());
-        db.insert(TABLE_NAME, null, values);
-        db.close();
+        values.put(COURSE_NAME, courseName);
+        values.put(COURSE_CODE, courseCode);
+        values.put(INSTRUCTOR, instructor);
+
+        long result = db.insert(TABLE_NAME, null, values);
+        return result != -1;
+    }
+
+    public ArrayList<Course> getAllCourses() {
+        ArrayList<Course> courseList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                courseList.add(new Course(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3)
+                ));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return courseList;
+    }
+
+    public boolean updateCourse(int id, String courseName, String courseCode, String instructor) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COURSE_NAME, courseName);
+        values.put(COURSE_CODE, courseCode);
+        values.put(INSTRUCTOR, instructor);
+
+        int result = db.update(TABLE_NAME, values, ID + " = ?", new String[]{String.valueOf(id)});
+        return result > 0;
+    }
+
+    public boolean deleteCourse(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_NAME, ID + " = ?", new String[]{String.valueOf(id)});
+        return result > 0;
     }
 }

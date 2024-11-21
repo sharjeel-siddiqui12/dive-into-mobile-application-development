@@ -1,63 +1,63 @@
 package com.example.mad_lab;
-
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
+import com.example.mad_lab.R;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText empName, empSalary, empJoiningDate, empEducation, empExperience;
-    private Button addEmployerBtn;
-    private DBHandler dbHandler;
+    private EditText etCourseName, etCourseCode, etInstructor;
+    private Button btnAdd;
+    private ListView lvCourses;
+    private DBHandler dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        empName = findViewById(R.id.empName);
-        empSalary = findViewById(R.id.empSalary);
-        empJoiningDate = findViewById(R.id.empJoiningDate);
-        empEducation = findViewById(R.id.empEducation);
-        empExperience = findViewById(R.id.empExperience);
-        addEmployerBtn = findViewById(R.id.addEmployerBtn);
-        dbHandler = new DBHandler(this);
+        etCourseName = findViewById(R.id.et_courseName);
+        etCourseCode = findViewById(R.id.et_courseCode);
+        etInstructor = findViewById(R.id.et_instructor);
+        btnAdd = findViewById(R.id.btn_add);
+        lvCourses = findViewById(R.id.lv_courses);
+        dbHelper = new DBHandler(this);
 
-        addEmployerBtn.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = empName.getText().toString();
-                String salaryStr = empSalary.getText().toString();
-                String joiningDate = empJoiningDate.getText().toString();
-                String education = empEducation.getText().toString();
-                String experienceStr = empExperience.getText().toString();
+                String courseName = etCourseName.getText().toString();
+                String courseCode = etCourseCode.getText().toString();
+                String instructor = etInstructor.getText().toString();
 
-                if (name.isEmpty() || salaryStr.isEmpty() || joiningDate.isEmpty() ||
-                        education.isEmpty() || experienceStr.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please fill all fields!", Toast.LENGTH_SHORT).show();
-                    return;
+                if (dbHelper.insertCourse(courseName, courseCode, instructor)) {
+                    Toast.makeText(MainActivity.this, "Course Added!", Toast.LENGTH_SHORT).show();
+                    displayCourses();
+                } else {
+                    Toast.makeText(MainActivity.this, "Error Adding Course!", Toast.LENGTH_SHORT).show();
                 }
-
-                double salary = Double.parseDouble(salaryStr);
-                int experience = Integer.parseInt(experienceStr);
-
-                Employer employer = new Employer(name, salary, joiningDate, education, experience);
-                dbHandler.addEmployer(employer);
-
-                Toast.makeText(MainActivity.this, "Employer Added Successfully!", Toast.LENGTH_SHORT).show();
-                clearFields();
             }
         });
+
+        displayCourses();
     }
 
-    private void clearFields() {
-        empName.setText("");
-        empSalary.setText("");
-        empJoiningDate.setText("");
-        empEducation.setText("");
-        empExperience.setText("");
+    private void displayCourses() {
+        ArrayList<Course> courses = dbHelper.getAllCourses();
+        ArrayList<String> courseNames = new ArrayList<>();
+        for (Course course : courses) {
+            courseNames.add(course.getCourseName());
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, courseNames);
+        lvCourses.setAdapter(adapter);
     }
 }
